@@ -3,27 +3,52 @@
 
 <head>
     <title>Login</title>
+    <style>
+        #divContainer {
+            text-align: center;
+        }
 
+        .redText {
+            color:Red;
+            background-color: blue;
+        }
+        .redText:hover {
+            color: green;
+        }
+
+        input {
+            text-align: center;
+        }
+        input {
+            font-style: Segoe UI;
+        }
+        #btnlogin:hover {
+            cursor: pointer;
+            font-size: large;
+            color: pink;
+        }
+    </style>
 
 </head>
 
 <body>
-    <div style="text-align: center;">
+    <div style="text-align: center;" id="divContainer">
         <h1>Login</h1>
-        <input type="tetx" placeholder="Ussername" id="txtusername">
-        <input type="tetx" placeholder="Password" id="txtpassword">
-        <div style="margin-top: 1rem">
-            <button id="btnlogin" ondblclick="alert('Login successfully.')">Login</button>
-        </div>
+        <input type="text" placeholder="Username" id="txtuser" class="redText">
 
+        <input type="password" placeholder="Password" id="txtpass" class="redText">
+        <div style="margin-top: 1rem;">
+            <button id="btnlogin">Login</button>
+        </div>
     </div>
 </body>
-<script>
-    console.log("Hello Worl");
-    let buttonLogin = document.querySelector('#btnlogin');
-    buttonLogin.onclick = function () {
-        alert('Logimn succesfully.')
-    };
-</script>
 
 </html>
+<script>
+    console.log("Hello World");
+
+    let buttonLogin = document.querySelector('#btnlogin');
+    buttonLogin.onclick = function () {
+        alert("Login Successful!")
+    };
+</script>
